@@ -39,7 +39,7 @@ def turnout_comparison():
     ax.annotate(f"{df.loc[LATEST,'PRN 2023']}%",(N_OBS-1.3,df.loc[LATEST,'PRN 2023']+2),color='black',fontsize=10,ha='center')
     ax.annotate(f"{df.loc[LATEST,'Today']}%",(N_OBS-0.3,df.loc[LATEST,'Today']),color='red',fontsize=10,ha='center')
 
-    # ALT-text copied directly to clipboard
+   # ALT-text written to file instead of clipboard
     ALT = ''
     ALT += str(ax.get_title())
     for i in range(len(df)):
@@ -47,8 +47,9 @@ def turnout_comparison():
             ALT += f'\n{df.index[i]}: {df["PRN 2023"].iloc[i]:.1f}% at PRN 2023 vs {df["Today"].iloc[i]}% today'
         else:
             ALT += f'\n{df.index[i]}: {df["PRN 2023"].iloc[i]:.1f}% at PRN 2023'
-    pyperclip.copy(ALT)
-
+    # Write ALT text to file
+    with open('alt_text.txt', 'w') as f:
+        f.write(ALT)
     plt.savefig('turnout.png',dpi=400)
     plt.close()
 
