@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
-import pyperclip
 
 def turnout_comparison():
     df = pd.read_csv(f'turnout.csv').set_index('time')
