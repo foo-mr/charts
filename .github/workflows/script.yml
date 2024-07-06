@@ -27,7 +27,7 @@ jobs:
         pip install pandas matplotlib pyperclip
 
     - name: Install xclip
-      run: sudo apt-get install xclip
+      run: sudo apt-get update && sudo apt-get install -y xclip
 
     - name: Set up virtual framebuffer
       run: |
