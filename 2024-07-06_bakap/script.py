@@ -49,6 +49,7 @@ def turnout_comparison():
     # Write ALT text to file
     with open('alt_text.txt', 'w') as f:
         f.write(ALT)
+        
     plt.savefig('turnout.png',dpi=400)
     plt.close()
 
