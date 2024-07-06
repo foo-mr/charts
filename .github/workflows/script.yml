@@ -26,21 +26,15 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pandas matplotlib pyperclip
-
-    - name: Install xclip
-      run: sudo apt-get update && sudo apt-get install -y xclip
-
-    - name: Set up virtual framebuffer
-      run: |
-        sudo apt-get install xvfb
-        Xvfb :99 &
-        export DISPLAY=:99
+        pip install pandas matplotlib
 
     - name: Change directory to scripts and run script
       run: |
         cd 2024-07-06_bakap
         python script.py  # Ensure the path to the script is correct
+
+    - name: List files after script execution
+      run: ls -la
 
     - name: Commit and push if there are changes
       run: |
