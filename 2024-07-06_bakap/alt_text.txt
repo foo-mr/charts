@@ -7,7 +7,7 @@ PRN 2023 vs Today
 12:00: 40.0% at PRN 2023 vs 31.84% today
 13:00: 48.4% at PRN 2023 vs 38.28% today
 14:00: 55.8% at PRN 2023 vs 44.59% today
-15:00: 63.2% at PRN 2023
+15:00: 63.2% at PRN 2023 vs 51.32% today
 16:00: 70.6% at PRN 2023
 17:00: 73.7% at PRN 2023
 18:00: 76.9% at PRN 2023
