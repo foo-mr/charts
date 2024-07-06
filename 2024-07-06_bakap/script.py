@@ -34,9 +34,9 @@ def turnout_comparison():
     # annotations
     LATEST = df.index[-1] if len(df.dropna(how='any')) == 0 else df.dropna(how='any').index[-1]
     N_OBS = len(df.dropna(how='any'))
-    ax.annotate(f"{df.loc['18:00','PRN 2023']}%",(10,df.loc['18:00','PRN 2023']-5),color='black',fontsize=10,ha='center')
-    ax.annotate(f"{df.loc[LATEST,'PRN 2023']}%",(N_OBS-1.3,df.loc[LATEST,'PRN 2023']+2),color='black',fontsize=10,ha='center')
-    ax.annotate(f"{df.loc[LATEST,'Today']}%",(N_OBS-0.3,df.loc[LATEST,'Today']),color='red',fontsize=10,ha='center')
+    ax.annotate(f"{df.loc['18:00','PRN 2023']:.1f}%",(10,df.loc['18:00','PRN 2023']-5),color='black',fontsize=10,ha='center')
+    ax.annotate(f"{df.loc[LATEST,'PRN 2023']:.1f}%",(N_OBS-1.3,df.loc[LATEST,'PRN 2023']+2),color='black',fontsize=10,ha='center')
+    ax.annotate(f"{df.loc[LATEST,'Today']:.1f}%",(N_OBS-0.3,df.loc[LATEST,'Today']),color='red',fontsize=10,ha='center')
 
    # ALT-text written to file instead of clipboard
     ALT = ''
