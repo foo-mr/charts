@@ -33,9 +33,6 @@ jobs:
         cd 2024-07-06_bakap
         python script.py  # Ensure the path to the script is correct
 
-    - name: List files after script execution
-      run: ls -la
-
     - name: Commit and push if there are changes
       run: |
         git config --local user.email "action@github.com"
