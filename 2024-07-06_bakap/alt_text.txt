@@ -1,6 +1,6 @@
 Voter Turnout (%) in N.20 Sungai Bakap
 PRN 2023 vs Today
-08:00: 0.0% at PRN 2023
+08:00: 0.0% at PRN 2023 vs 0.0% today
 09:00: 10.5% at PRN 2023 vs 8.88% today
 10:00: 21.1% at PRN 2023 vs 16.74% today
 11:00: 30.5% at PRN 2023 vs 24.0% today
