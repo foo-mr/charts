@@ -1,0 +1,41 @@
+name: Run Turnout Comparison
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'  # Specify the Python version you need
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas matplotlib pyperclip
+
+    - name: Install xclip
+      run: sudo apt-get install xclip
+
+    - name: Set up virtual framebuffer
+      run: |
+        sudo apt-get install xvfb
+        Xvfb :99 &
+        export DISPLAY=:99
+
+    - name: Change directory to scripts and run script
+      run: |
+        cd 2024-07-06_bakap
+        python script.py  # Ensure the path to the script is correct
